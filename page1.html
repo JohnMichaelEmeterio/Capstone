@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +8,23 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
+    <!--<link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
     <script type="text/javascript" src="/js/materialize.min.js"></script>
+    -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <!--top nav-->
 
 <body class="grey lighten-4">
-    <nav class="z-depth-0">
+    <nav class="z- green accent-3 ">
         <div class="nav-wrapper container">
-            <a href="/">PTC scholar Online<span> Appointment</span></a>
+            <a href="/">PTC Online<span>Register</span></a>
             <span class="right grey-text text-darken-1">
                 <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
             </span>
@@ -28,23 +35,24 @@
 
     <ul id="side-menu" class="sidenav side-menu">
         <li><a class="subheader">Online Register</a></li>
-        <li><a href="students.html" class="waves-effect">
-                <i class="material-icons"></i>Students</a>
+        <li><a href="/" class="waves-effect">
+                <i class="material-icons">account_circle</i>Students</a>
         </li>
-        <li><a href="course.html" class="waves-effect">
-                <i class="material-icons"></i>Courses</a>
+        <li><a href="/" class="waves-effect">
+                <i class="material-icons">assignment</i>Courses</a>
         </li>
         <li><a href="contact.html" class="waves-effect">
-                <i class="material-icons"></i>Contacts</a>
+                <i class="material-icons">contacts</i>Contacts</a>
         </li>
         <li><a href="/" class="waves-effect" id="logout">
-            <i class="material-icons">settings_power</i>Logout</a>
-          </li>
+                <i class="material-icons">settings_power</i>Logout</a>
+        </li>
     </ul>
 
     <!--student list-->
     <div class="students container grey-text text-darken-1">
-        <h6>Student List</h6>                   
+        <h6>Student List</h6>
+
     </div>
 
     <!--add student button-->
@@ -60,67 +68,50 @@
             <h6>New Student</h6>
             <div class="divider"></div>
             <div class="input-field">
-                <input placeholder="e.g. John Williams" id="name" type="text" class="validate">
+                <input placeholder="e.g. John Michael" id="name" type="text" class="validate">
                 <label for="name">Student Name</label>
             </div>
             <div class="input-field">
                 <input placeholder="e.g. 202011111" id="section" type="text" class="validate" autocomplete="off">
-                <label for="id">Section AND Course</label>
+                <label for="section">Section AND Course</label>
             </div>
             <div class="input-field">
-                <input placeholder="e.g. 202011111" id="id" type="text" class="validate" autocomplete="off">
+                <input placeholder="e.g. 2020-1287" id="id" type="text" class="validate" autocomplete="off">
                 <label for="id">ID Number</label>
             </div>
             <div class="input-field center">
-                <button class="btn-small">Add</button>
+                <button id="btn1" class="btn-small">Add</button>
             </div>
         </form>
     </div>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyANbgo8c0rbSdjZu8UORbeL06iIIT6rx7w",
+            authDomain: "fir-b86f6.firebaseapp.com",
+            databaseURL: "https://fir-b86f6-default-rtdb.firebaseio.com",
+            projectId: "fir-b86f6",
+            storageBucket: "fir-b86f6.appspot.com",
+            messagingSenderId: "786526910108",
+            appId: "1:786526910108:web:c377e78349b93b7190df59"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
 
 
-
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-     apiKey: "AIzaSyDTDPtKdzHpeqKQdTOdkRvsFeilHmr2otE",
-      authDomain: "fir-auth-4b14c.firebaseapp.com",
-      projectId: "fir-auth-4b14c",
-      storageBucket: "fir-auth-4b14c.appspot.com",
-      messagingSenderId: "596671955947",
-      appId: "1:596671955947:web:3a28cadc91e2ab5d7c8fae"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.firestore();
-</script>
+    </script>
 
 
-<script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-        apiKey: "AIzaSyDTDPtKdzHpeqKQdTOdkRvsFeilHmr2otE",
-        authDomain: "fir-auth-4b14c.firebaseapp.com",
-        projectId: "fir-auth-4b14c",
-        storageBucket: "fir-auth-4b14c.appspot.com",
-        messagingSenderId: "596671955947",
-        appId: "1:596671955947:web:3a28cadc91e2ab5d7c8fae"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-</script>
-    
     <script src="/js/ui.js"></script>
     <script src="/js/db.js"></script>
+    <script src="/js/database.js"></script>
+
 </body>
+
 </html>

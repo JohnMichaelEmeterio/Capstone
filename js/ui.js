@@ -16,9 +16,9 @@ const renderStudent = (data, ID) => {
             <div class="card-panel student white row" data-id=${ID}>
                     <img src="img/student.png" alt="Student 1">
                     <div class="student-details">
-
+                        <p>Successfully Created Appointment</p>
                         <div class="student-name">${data.name}</div>
-                         <div class="student-name">${data.section}</div>
+                         <div class="student-section">${data.section}</div>
                         <div class="student-id">${data.id}</div>
                     </div>
                     <div class="student-delete">

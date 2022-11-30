@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html>
- 
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>JW Online Register</title>
+  <title>Appointment</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
+
+  <!-- <link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
-  <script type="text/javascript" src="/js/materialize.min.js"></script>
+  <script type="text/javascript" src="/js/materialize.min.js"></script>-->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<!--top nav--> 
+<!--top nav-->
 
 <body class="grey lighten-4">
-  <nav class="z-depth-0">
+  <nav class="z- green accent-3">
     <div class="nav-wrapper container">
-      <a href="/">PTC scholar<span> appointment</span></a>
+      <a href="/">PTC<span> appointment</span></a>
     </div>
   </nav>
   <!-- end of top nav -->
@@ -38,7 +44,7 @@
         <input placeholder="Enter Password" id="login-password" type="password" class="validate" autocomplete="off">
         <label for="pass"><i class="material-icons left">lock_outline</i>Password</label>
       </div>
-    <!-- <a href="/" class="waves-effect">
+      <!-- <a href="/" class="waves-effect">
         <p>Forget Your Password?</p>
       </br></a>-->
       <a href="/" class="waves-effect sidenav-trigger" data-target="side-form">
@@ -59,6 +65,11 @@
       <div class="divider"></div>
 
       <div class="input-field">
+        <input placeholder="Enter Username" id="name" type="text" class="validate" autocomplete="off">
+        <label for="username">Username</label>
+      </div>
+
+      <div class="input-field">
         <input placeholder="Enter Email Address" id="email" type="text" class="validate" autocomplete="off">
         <label for="email">Email Address</label>
       </div>
@@ -70,35 +81,42 @@
 
 
       <div class="input-field center">
-        <button class="btn-small" type="submit">Create Account</button>
+        <button class="btn-small" type="submit" id="submitData">Create Account</button>
       </div>
     </form>
   </div>
   <!-- end of new user registration side nav -->
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
 
 
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyDTDPtKdzHpeqKQdTOdkRvsFeilHmr2otE",
-    authDomain: "fir-auth-4b14c.firebaseapp.com",
-    projectId: "fir-auth-4b14c",
-    storageBucket: "fir-auth-4b14c.appspot.com",
-    messagingSenderId: "596671955947",
-    appId: "1:596671955947:web:3a28cadc91e2ab5d7c8fae"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  const auth = firebase.auth();
-</script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyANbgo8c0rbSdjZu8UORbeL06iIIT6rx7w",
+      authDomain: "fir-b86f6.firebaseapp.com",
+      databaseURL: "https://fir-b86f6-default-rtdb.firebaseio.com",
+      projectId: "fir-b86f6",
+      storageBucket: "fir-b86f6.appspot.com",
+      messagingSenderId: "786526910108",
+      appId: "1:786526910108:web:c377e78349b93b7190df59"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+  </script>
 
 
- <script src="/js/auth.js"></script>
+  <script src="/js/auth.js"></script>
   <script src="/js/ui.js"></script>
+  <script src="/js/database.js"></script>
+
+
+
 </body>
+
 </html>
